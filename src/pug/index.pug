@@ -1,0 +1,99 @@
+extends _layout/default
+
+block vars
+  -title        = 'Hoàng Phii'
+  -description  = ''
+  -keywords     = ''
+  -og_title     = ''
+  -url          = ''
+  -pageID       = 'homepage'
+  -path         = '.'
+
+block scripts
+
+block container
+  section.cv
+    .decor.js-daisy
+    .container.container-pri
+      .cv-wrap.flex.flex-24
+        .cv-inner
+          .cv-block.cv-heading.flex.flex-4
+            h1.title-32.fw-b.f-tt.t-ct.t-up Nguyễn Võ Hoàng Phi
+            p.text-20.fw-b.f-tt.t-ct Front End Developer
+            ul.list
+              each listData in [{title: "Email:", desc: "hoangphiio.dev@gmail.com"}, {title: "Số điện thoại:", desc: "0903 873 915"}, {title: "Mạng xã hội:", desc: "github.com/hoangphiio"} ]
+                li.list-item
+                  .list-box
+                    a.text-16(href="#!")=listData.title
+                      | &nbsp;
+                      span.fw-sb=listData.desc
+          .cv-block.cv-edu.flex.flex-12
+            h2.text-20.fw-b.t-up.t-ct.f-tt Trình độ học vấn
+            .cv-content.flex.flex-4
+              .box
+                p.text-16.fw-b.t-up Đại học Nguyễn Tất Thành
+                p.text-14 Tháng 11 năm 2017 - Tháng 2 năm 2021
+              p.text-14.fw-m Kỹ sư phần mềm
+              ul.list.flex.flex-4
+                - var list = ["Tốt nghiệp loại khá với GPA 2.8/4.", "Nhận được học bổng khuyến học từ trường Đại học Nguyễn Tất Thành."]
+                each listData in list
+                  li.list-item.dot
+                    span.text-16=listData
+          .cv-block.cv-exp.flex.flex-12
+            h2.text-20.fw-b.t-up.t-ct.f-tt Kinh nghiệm làm việc
+            .cv-info.flex.flex-24
+              .cv-content.flex.flex-4
+                .box
+                  p.text-16.fw-b.t-up Công ty TNHH - MONA MEDIA
+                  p.text-14 Tháng 03 năm 2022 - Hiện nay
+                p.text-14.fw-m Front End Developer
+                ul.list.flex.flex-4
+                  - var list = ["Tham gia các dự án cho khách hàng, lập trình các sản phẩm HTML với các hiệu ứng hiện đại, chuẩn responsive trên các thiết bị từ PC, Desktop, Mobile,...", "Cắt HTML, sử dụng HTML5/CSS3, Jquery để làm giao diện , thực hiện các ý tưởng thiết kế, ý tưởng xây dựng của khách hàng.", "Kiểm thử và nhập liệu mẫu theo đúng dữ liệu mà mình đã cắt HTML, kiểm tra điều chỉnh lại code nếu có lỗi phát sinh.", "Sử dụng các công cụ kéo-thả (WordPress) để thiết kế website phù hợp với yêu cầu khách hàng."]
+                  each listData in list
+                    li.list-item.dot
+                      span.text-16=listData
+              .cv-content.flex.flex-4
+                .box
+                  p.text-16.fw-b.t-up Công ty Công nghệ Vũ Thảo
+                  p.text-14 Tháng 10 năm 2022 - Tháng 3 năm 2024
+                p.text-14.fw-m Front End Developer
+                ul.list.flex.flex-4
+                  - var list = ["Tham gia phát triển giao diện các dự án như Tập đoàn Điện lực Việt Nam (EVN), Petrolimex, PNJ, ....", "Chỉnh sửa giao diện dựng sẵn (Figma, Photoshop,...).", "Fix bug, thay đổi giao diện theo yêu cầu của khách hàng.", "Phối hợp với BE dựng site theo môi trường (UAT, MIG, LIVE) khách hàng yêu cầu.", "Hiểu và tuân thủ các quy trình làm việc của công ty, xây dựng dựa trên source code hiện có để đảm bảo việc giao tính năng, giao diện theo kịp tiến độ của khách hàng.", "Nghiên cứu cách tối ưu soucre code (HTML, CSS, JavaScripts), tiêu chuẩn của website.", "Thiết kế giao diện và các icons (Custom dựa trên các icon có sẵn). Phát triển bố cục và thiết kế website theo tiêu chuẩn SEO."]
+                  each listData in list
+                    li.list-item.dot
+                      span.text-16=listData
+              .cv-content.flex.flex-4
+                .box
+                  p.text-16.fw-b.t-up Công ty TNHH MTV TM-DV PTIT
+                  p.text-14 Tháng 2 năm 2021 - Tháng 2 năm 2022
+                p.text-14.fw-m Front End Developer
+                ul.list.flex.flex-4
+                  - var list = ["Xử lý các thiết kế giao diện hiện có của khách hàng. Bảo trì source code của công ty bằng ngôn ngữ PHP.", "Thiết kế các banner, icons, layout (đơn giản) bằng các công cụ như canva, photoshop, figma, ..."]
+                  each listData in list
+                    li.list-item.dot
+                      span.text-16=listData
+        .cv-inner
+          .cv-block.cv-exp.flex.flex-12
+            .cv-info.flex.flex-24
+              .cv-content.flex.flex-4
+                ul.list.flex.flex-4
+                  - var list = ["Tạo project landing page bằng ReactJS."]
+                  each listData in list
+                    li.list-item.dot
+                      span.text-16=listData
+                p.text-16
+                  strong Thực tập:
+                  | &nbsp;Đọc tài liệu, nghiên cứu, học ngôn ngữ và kỹ năng phù hợp với vị trí Front End.
+                p.text-16
+                  strong Training:
+                  | &nbsp;Kiến ​thức về thiết kế giao diện và ngôn ngữ PHP.
+          .cv-block.cv-code.flex.flex-12
+            h2.text-20.fw-b.t-up.t-ct.f-tt Kỹ năng công nghệ
+            .cv-info.flex.flex-24
+              .cv-content.flex.flex-4
+                p.text-16
+                  strong Lập trình:
+                  | &nbsp;HTML(HTML5, Pug), CSS(CSS3, SASS), JavaScripts, Gulp, Git, Bootstrap, Tailwindcss, WordPress, ReactJS.
+                p.text-16
+                  strong Website:
+                  | &nbsp; E-commerce, Web giới thiệu, LandingPage, Fullpage, WordPress,...
