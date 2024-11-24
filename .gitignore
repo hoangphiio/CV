@@ -1,4 +1,6 @@
+src
+gulpfile.js
+getfile.php
 node_modules
-dist
-/dist
+package.json
 package-lock.json
